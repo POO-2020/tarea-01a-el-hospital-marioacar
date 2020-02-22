@@ -21,7 +21,16 @@ export default class fecha {
         let sd  = Math.trunc(años/msegAño)
         return(`${sd}`)
     }
+    getMeses(){
+        let mes = this.meses[this.fecha.getDay()];
+        let fn = Date.now() - this.fecha.getFullYear();
+        let fd = Math.trunc(mes - fn);
+        return(`${fd}`)
+
+    }
+
+   
     
-    
+   
 
 }
