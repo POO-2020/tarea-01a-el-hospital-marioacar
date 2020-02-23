@@ -14,7 +14,7 @@ export default class Doctor{
         this.celula = celula
     }
 
-    getPerfil(){
+    getPerfilD(){
         return (`${this.cedula},${this.especialidad},${this.nombre.getNombreCompleto()},${this.celular}`)
     }
 }
