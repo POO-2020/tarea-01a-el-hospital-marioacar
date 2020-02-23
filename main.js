@@ -26,6 +26,10 @@ class Main{
         console.log(meses.getMeses())
     }
 
+    probarSemanas(){
+        console.log(sem.getSemanas())
+    }
+
 }
 
 let app = new Main();
@@ -33,3 +37,4 @@ app.probarNombre();
 app.probarFecha();
 app.probarAños();
 app.probarMeses();
+app.probarSemanas();

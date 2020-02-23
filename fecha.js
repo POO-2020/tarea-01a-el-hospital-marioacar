@@ -29,7 +29,11 @@ export default class fecha {
 
     }
 
-   
+    getSemanas(){
+        let semanas = 4
+        let sem = 2020 /semanas
+        return(`${sem}`)
+    }
     
    
 
