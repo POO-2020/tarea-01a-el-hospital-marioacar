@@ -13,12 +13,13 @@ class Main{
     }
 
     probarFecha(){
+        let fecha = new Fecha (20/2/2020)
         console.log(fecha.getFecha())
     }
 
     probarAños(){
-        let fecha = new Fecha (7,12,2000)
-        console.log(fecha.getAños())
+        let Años = new Fecha (7,12,2000)
+        console.log(Años.getAños())
     }
     
     probarMeses(){
@@ -27,7 +28,18 @@ class Main{
     }
 
     probarSemanas(){
+        let sem = new Semanas (4)
         console.log(sem.getSemanas())
+    }
+
+    getDiaFecha(){
+        let dias = new Fecha (20/2/2020)
+        console.log(dias.getDiaFecha())
+    }
+
+    getDias(){
+        let total = new Dias (2020)
+        console.log(total.getDias())
     }
 
 }
@@ -38,3 +50,4 @@ app.probarFecha();
 app.probarAños();
 app.probarMeses();
 app.probarSemanas();
+app.probarDiaFecha(); 

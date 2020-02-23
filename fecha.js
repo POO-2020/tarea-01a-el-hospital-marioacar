@@ -16,7 +16,7 @@ export default class fecha {
     }
 
     getAños(){
-        let años = Date.now()- this.fecha;
+        let Años = Date.now()- this.fecha;
         let msegAño= 1000*60*60*24*365;
         let sd  = Math.trunc(años/msegAño)
         return(`${sd}`)
@@ -34,7 +34,20 @@ export default class fecha {
         let sem = 2020 /semanas
         return(`${sem}`)
     }
-    
+
+    getDiaFecha(){
+        let dia=this.dias[this.fecha.getDay()];
+        let mes=this.meses[this.fecha.getMonth()];
+        return(`${dia} ${this.fecha.getDate()} de ${mes} del ${this.fecha.getFullYear()}`);
+
+    }
+
+    getDias(){
+        let da =365
+        let total = 2020 /da
+
+        return(`${total}`)
+    }
    
 
 }
