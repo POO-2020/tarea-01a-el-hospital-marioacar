@@ -18,7 +18,7 @@ export default class fecha {
     getAños(){
         let Años = Date.now()- this.fecha;
         let msegAño= 1000*60*60*24*365;
-        let sd  = Math.trunc(años/msegAño)
+        let sd  = Math.trunc(Años/msegAño)
         return(`${sd}`)
     }
     getMeses(){
@@ -48,6 +48,8 @@ export default class fecha {
 
         return(`${total}`)
     }
+
+    
    
 
 }
