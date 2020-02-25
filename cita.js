@@ -18,6 +18,6 @@ export default class cita{
     }
 
     getCita(){
-        return(`${this.fecha.getFecha()},${this.hora},${this.doctor.getPerfilD()},${this.paciente.getPerfil()}`)
+        return(`${this.fecha.getFecha()},${this.hora.getFomato24()},${this.doctor.getPerfilD()},${this.paciente.getPerfil()}`)
     }
 }

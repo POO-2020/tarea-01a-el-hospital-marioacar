@@ -1,27 +1,27 @@
- export default class nombre{
+ export default class Nombre{
      /**
       * 
       * @param {string} Nombre 
       * @param {string} AP 
       * @param {string} AM 
       */
-    constructor(Nombre,AP,AM){
-        this.nombre = Nombre
+    constructor(nombre,AP,AM){
+        this.nombre = nombre
         this.AP = AP
         this.AM = AM
 
     }
 
-    getNombreCompeto(){
-        return (`${this.nombre}${this.AP}${this.AM}`)
+    getNombreCompleto(){
+        return `${this.nombre} ${this.AP} ${this.AM}`
     }
 
     getApellidoNombre(){
-        return (`${this.AP}${this.AM}${this.Nombre}`)
+        return `${this.AP} ${this.AM} ${this.nombre}`
     }
 
     getIniciales(){
-        return (`${this.nombre.chartArt(0)}${this.AP.chartArt(0)}${this.AM.chartArt(0)}`)
+        return `${this.nombre.charAt(0)}${this.AP.charAt(0)}${this.AM.charAt(0)}`
     }
 
 }

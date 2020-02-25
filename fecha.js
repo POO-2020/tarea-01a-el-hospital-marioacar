@@ -1,14 +1,14 @@
-export default class fecha {
+export default class Fecha {
     /**
      * 
      * @param {Number} Años 
      * @param {Number} fecha 
      * @param {Number} meses 
      */
-    constructor(Años,fecha,meses){
-        this.fecha=new Date(año,mes -1, dia);
-        this.dias=["Domingo","Lunes","Martes","Miércoles","Jueves","Vierenes","Sábado"]
-        this.meses=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]
+    constructor(año,mes,dia){
+        this.fecha = new Date (año,mes -1, dia);
+        this.dias = ["Domingo","Lunes","Martes","Miércoles","Jueves","Vierenes","Sábado"]
+        this.meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]
     }
 
     getFecha(){
@@ -16,13 +16,14 @@ export default class fecha {
     }
 
     getAños(){
-        let Años = Date.now()- this.fecha;
+        let año = Date.now()- this.fecha;
         let msegAño= 1000*60*60*24*365;
-        let sd  = Math.trunc(Años/msegAño)
+        let sd  = Math.trunc(año/msegAño);
         return(`${sd}`)
     }
+
     getMeses(){
-        let mes = this.meses[this.fecha.getDay()];
+        let mes = new Date (Date.now());
         let fn = Date.now() - this.fecha.getFullYear();
         let fd = Math.trunc(mes - fn);
         return(`${fd}`)
@@ -36,14 +37,14 @@ export default class fecha {
     }
 
     getDiaFecha(){
-        let dia=this.dias[this.fecha.getDay()];
-        let mes=this.meses[this.fecha.getMonth()];
+        let dia = this.dias[this.fecha.getDay()];
+        let mes = this.meses[this.fecha.getMonth()];
         return(`${dia} ${this.fecha.getDate()} de ${mes} del ${this.fecha.getFullYear()}`);
 
     }
 
     getDias(){
-        let da =365
+        let da = 365
         let total = 2020 /da
 
         return(`${total}`)

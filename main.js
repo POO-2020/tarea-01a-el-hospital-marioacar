@@ -1,5 +1,5 @@
 import Nombre from "./nombre.js"
-import fecha from "./fecha.js"
+import Fecha from "./fecha.js"
 import paciente from "./paciente.js"
 import Doctor from "./doctor.js"
 import cita from "./cita.js"
@@ -9,40 +9,40 @@ class Main{
     }
 
     probarNombre(){
-        let Nombre = new Nombre ("Mario Axel","Carvantes","Gutierrez");
-        console.log(this.Nombre.getNombreCompleto());
-        console.log(this.Nombre.getApellidoNombre());
-        console.log(this.Nombre.getIniciales());
+        let nombre = new Nombre ("Mario Axel", "Carvantes", "Gutierrez");
+        console.log(nombre.getNombreCompleto());
+        console.log(nombre.getApellidoNombre());
+        console.log(nombre.getIniciales());
     }
 
     probarFecha(){
-        let fecha = new Fecha (20/2/2020)
+        let fecha = new Fecha (20,2,2020)
         console.log(fecha.getFecha())
     }
 
     probarAños(){
-        let Años = new Fecha (7,12,2000)
-        console.log(Años.getAños())
+        let fecha = new Fecha (7,12,2000)
+        console.log(fecha.getAños())
     }
     
     probarMeses(){
-        let meses = new Mes (12)
-        console.log(meses.getMeses())
+        let fecha = new Fecha(7,12,2000)
+        console.log(fecha.getMeses())
     }
 
     probarSemanas(){
-        let sem = new Semanas (4)
-        console.log(sem.getSemanas())
+        let fecha = new Fecha (4)
+        console.log(fecha.getSemanas())
     }
 
-    getDiaFecha(){
-        let dias = new Fecha (20/2/2020)
-        console.log(dias.getDiaFecha())
+    ProbarDiaFecha(){
+        let fecha = new Fecha (20,2,2020)
+        console.log(fecha.getDiaFecha())
     }
 
-    getDias(){
-        let total = new Dias (2020)
-        console.log(total.getDias())
+    ProbarDias(){
+        let fecha = new Fecha (2020)
+        console.log(fecha.getDias())
     }
     
     probarPerfil(){
@@ -72,3 +72,4 @@ app.probarDiaFecha();
 app.probarPerfil();
 app.probarPerfilD();
 app.probarCita();
+
