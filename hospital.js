@@ -12,8 +12,24 @@ new class hospital{
         citas = cita
     }
 
-
-    registrarDoctor(){
-        
+    registrarDoctore(Doctores){
+        this.Doctores.push(Doctores)
     }
+
+    listarDoctores(){
+        this.listarDoctores.forEch (Doctores => {
+            console.log(`${i +1 }${Doctores.getPerfil()}`);
+        });
+    }
+    
+    registrarCita(Cita){
+        this.Cita.push(Cita)
+    }
+
+    listarCitas(){
+        this.listarCitas.forEch (Citas => {
+            console.log(`${i +1 }${Citas.getPerfil()}`);
+        });
+    }
+
 }

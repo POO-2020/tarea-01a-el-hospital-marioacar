@@ -32,21 +32,20 @@ export default class Fecha {
 
     getSemanas(){
         let semanas = 4
-        let sem = 2020 /semanas
+        let sem = 2020 / semanas
         return(`${sem}`)
     }
 
-    getDiaFecha(){
+    getDia(){
         let dia = this.dias[this.fecha.getDay()];
         let mes = this.meses[this.fecha.getMonth()];
         return(`${dia} ${this.fecha.getDate()} de ${mes} del ${this.fecha.getFullYear()}`);
 
     }
 
-    getDias(){
+    getDiaFecha(){
         let da = 365
-        let total = 2020 /da
-
+        let total = Math.trunc(2020 /da)
         return(`${total}`)
     }
 
