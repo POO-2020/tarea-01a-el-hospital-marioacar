@@ -5,7 +5,7 @@ export default class tiempo {
      * @param {number} minuto 
      * @param {number} periodoP 
      */
-    constructor(hora,minuto,periodoP){
+    constructor(hora,minuto,periodo){
         this.minuto = minuto
         this.periodo = periodo
         this.hora = hora

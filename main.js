@@ -3,8 +3,15 @@ import Fecha from "./fecha.js"
 import Paciente from "./paciente.js"
 import Doctor from "./doctor.js"
 import Cita from "./cita.js"
+import Hospital from "./hospital.js"
+import Tiempo from "./tiempo.js"
 class Main{
     constructor(){
+        this.doctor1 = new Doctor(20165460, "traumatologo", new Nombre("Bedivere", "Ansel"), "312-125-01-89")
+        this.doctor2 = new Doctor(20141569, "otorrinolaringologo", new Nombre("Amiya" , "Perfue"), "01-800-99")
+        this.paciente1 = new Paciente(new Nombre ("Elizabeth", "Bathory", "Carmila" ), new Fecha(20, 6, 2020), "174-155-08-95")
+        this.hospital = new Hospital ("Hospital Paso al infierno", "AV. siempre viva")
+
 
     }
 
@@ -44,9 +51,16 @@ class Main{
         let fecha = new Fecha (2020)
         console.log(fecha.getDiaFecha())
     }
+
+    probarTiempo() {
+        let hora = new Tiempo(7, 35, "AM")
+        console.log(hora.getFormato12())
+        console.log(hora.getFormato24())
+    }
+
     
     probarPerfil(){
-        let paciente = new Paciente ("Mario Axel Carvantes", new Fecha (1,2,2020), new telefono ("312-155-01-89"))
+        let paciente = new Paciente ("Mario Axel Carvantes", new Fecha (1,2,2020), "312-155-01-89")
         console.log(paciente.getPerfil())
     }
 
@@ -56,8 +70,16 @@ class Main{
     }
 
     probarCita(){
-        let cita =  new Cita (new Fecha (20,5,2020, new Doctor ("DR.Pendragon"), new Paciente ("MR.Morgan"))) 
+        let cita =  new Cita (new Fecha (20,5,2020, new Cita ("DR.Pendragon"), new Paciente ("MR.Morgan"))) 
         console.log(cita.getCita())
+    }
+
+    probarHospital(){
+        console.log(this.hospital.nombre)
+        console.log(this.hospital.direccion)
+        this.hospital.registrarDoctores(this.doctor1)
+        this.hospital.registrarDoctores(this.doctor2)
+        this.hospital.listarDoctores()
     }
 
 }
@@ -69,7 +91,8 @@ app.probarAños();
 app.probarMeses();
 app.probarSemanas();
 app.probarDiaFecha(); 
-app.probarDia();
+app.ProbarDia();
+app.probarTiempo();
 app.probarPerfil();
 app.probarPerfilD();
 app.probarCita();
