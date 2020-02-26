@@ -7,7 +7,7 @@ import Hospital from "./hospital.js"
 import Tiempo from "./tiempo.js"
 class Main{
     constructor(){
-        this.doctor1 = new Doctor(20165460, "traumatologo", new Nombre("Bedivere", "Ansel"), "312-125-01-89")
+        this.doctor1 = new Doctor(new Nombre("Arthur","Pendragon",""), "otorrinolaringologo", "312-144-10-90", "Aug50FN55SCAR57PKP90")
         this.doctor2 = new Doctor(20141569, "otorrinolaringologo", new Nombre("Amiya" , "Perfue"), "01-800-99")
         this.paciente1 = new Paciente(new Nombre ("Elizabeth", "Bathory", "Carmila" ), new Fecha(20, 6, 2020), "174-155-08-95")
         this.hospital = new Hospital ("Hospital Paso al infierno", "AV. siempre viva")
@@ -60,18 +60,18 @@ class Main{
 
     
     probarPerfil(){
-        let paciente = new Paciente ("Mario Axel Carvantes", new Fecha (1,2,2020), "312-155-01-89")
+        let paciente = new Paciente (new Nombre("Mario Axel Carvantes"), new Fecha (2020,1,1), "312-155-01-89")
         console.log(paciente.getPerfil())
     }
 
     probarPerfilD(){
-        let doctor = new Doctor ("Arthur Pendragon", new Especialidad ("otorrinolaringologo"), new Celular ("312-144-10-90"), new Celula ("Aug50FN55SCAR57PKP90"))
+        let doctor = new Doctor (new Nombre("Arthur","Pendragon",""), "otorrinolaringologo", "312-144-10-90", "Aug50FN55SCAR57PKP90")
         console.log(doctor.getPerfilD())
     }
 
     probarCita(){
-        let cita =  new Cita (new Fecha (20,5,2020, new Cita ("DR.Pendragon"), new Paciente ("MR.Morgan"))) 
-        console.log(cita.getCita())
+        let cita =  new Cita (new Fecha (20,5,2020), new Tiempo(15,25,'PM'), this.doctor1,this.paciente1); 
+        console.log(cita.getCita());
     }
 
     probarHospital(){

@@ -11,7 +11,6 @@ export default class tiempo {
         this.hora = hora
     }
 
-
     getFormato12(){
         return `${this.hora}:${this.minutos} ${this.periodo}`
 

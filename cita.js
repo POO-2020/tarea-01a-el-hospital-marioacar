@@ -10,7 +10,7 @@ export default class cita{
      * @param {string} doctor 
      * @param {string} paciente 
      */
-    constructor(fecha,hora,doctor,paciente,){
+    constructor(fecha,hora,doctor,paciente){
         this.fecha = fecha
         this.hora = hora
         this.doctor = doctor
@@ -18,6 +18,6 @@ export default class cita{
     }
 
     getCita(){
-        return(`${this.fecha.getFecha()},${this.hora.getFomato24()},${this.doctor.getPerfilD()},${this.paciente.getPerfil()}`)
+        return(`${this.fecha.getFecha()},${this.hora.getFormato24()},${this.doctor.getPerfilD()},${this.paciente.getPerfil()}`)
     }
 }
